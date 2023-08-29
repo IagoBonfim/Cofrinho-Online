@@ -1,11 +1,12 @@
 const saldo = document.querySelector('#saldo')
-const porquinho = document.querySelectorAll('.imagemPorquinho')
+let porquinho = document.querySelectorAll('.imagemPorquinho')
 const imagens = ['Adicionar_porquinho.jpg', 'Quebrado.png']
 let armazenado = []
 
 function Adicionar(){
     armazenado.push(Number(adicionar.value)) 
-    porquinho.img.src = `/imagens/${imagens[0]}`
+    porquinho.innerHTML = `<img src="/imagens/${imagens[0]}">`
+    console.log('aqui', porquinho);
 }
 function Quebrar(){
     let total = armazenado.reduce((soma, i) => {return soma + i }) 
