@@ -1,31 +1,39 @@
-h1{
+
+h1 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50pt;
 }
-#saldo{
+
+#saldo {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50pt;
     color: rgb(4, 175, 4);
 }
-.imagemPorquinho{
+
+.imagemPorquinho {
     display: flex;
     justify-content: center;
     max-width: 600px;
     min-width: 150px;
 }
+
 button {
-    
-    color: aliceblue;
+
+    color: rgb(71, 71, 71);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16pt;
 
 }
+
 button#Adicionar {
     background-color: rgb(4, 206, 4);
-    
+    color: aliceblue;
+
 }
+
 button#Quebrar {
     background-color: brown;
+    color: aliceblue;
 }

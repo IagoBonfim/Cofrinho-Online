@@ -9,6 +9,7 @@ function Adicionar() {
     } else {
         armazenado.push(Number(adicionar.value))
         saldo.innerHTML = "Uhul, o dinheiro foi adicionado!"
+        alert(`R$ ${Number(adicionar.value)},00 adicionado com sucesso!`)
         escreverInnerHTML(imagens[0])
     }
 }
@@ -24,4 +25,8 @@ function Quebrar() {
 }
 function escreverInnerHTML(texto){
      return porquinho.innerHTML = `<img width="300" src="./imagens/${texto}">`
+}
+function adicionarValorPeloBotao(num){
+    armazenado.push(num)
+    alert(`R$ ${num},00 adicionado com sucesso!`)
 }
