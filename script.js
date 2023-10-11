@@ -2,7 +2,6 @@ const saldo = document.querySelector('#saldo')
 
 let porquinho = document.querySelector('.imagemPorquinho')
 const imagens = ['Adicionar_porquinho.jpg', 'Quebrado.png', 'magro.jpg']
-let armazenado = []
 
 const Adicionar = document.querySelector("#btnAdicionar")
 Adicionar.addEventListener('click', evento => {
@@ -11,13 +10,12 @@ Adicionar.addEventListener('click', evento => {
     if (inputAdicionar < 1) {
         alert('Adicione um valor maior!')
     } else {
-        armazenado.push(Number(inputAdicionar))
+        localStorage.armazenado = inputAdicionar
         saldo.innerHTML = "Uhul, o dinheiro foi adicionado!"
         alert(`R$ ${(inputAdicionar)},00 adicionado com sucesso!`)
         escreverInnerHTML(imagens[0])
     }
-    console.log(armazenado);
-});
+    });
 const Quebrar = document.querySelector('#Quebrar')
 Quebrar.addEventListener('click', evento => {
     let total = armazenado.reduce((soma, i) => soma + Number(i))
