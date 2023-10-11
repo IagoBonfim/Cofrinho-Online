@@ -11,9 +11,9 @@ Adicionar.addEventListener('click', evento => {
     if (inputAdicionar < 1) {
         alert('Adicione um valor maior!')
     } else {
-        
-        if(localStorage.hasOwnProperty("armazenado")){
-             armazenado = JSON.parse(localStorage.getItem('armazenado'))
+
+        if (localStorage.hasOwnProperty("armazenado")) {
+            armazenado = JSON.parse(localStorage.getItem('armazenado'))
         }
         armazenado.push(inputAdicionar)
         localStorage.setItem('armazenado', JSON.stringify(armazenado))
@@ -48,17 +48,17 @@ Quebrar.addEventListener('click', evento => {
 function escreverInnerHTML(texto) {
     return porquinho.innerHTML = `<img width="300" src="./imagens/${texto}">`
 }
-const adicionarValor = document.querySelectorAll('button')
-
-adicionarValor.forEach((elemento) => {
-
+const adicionarValorDoBotao = document.querySelectorAll('button')
+adicionarValorDoBotao.forEach((elemento) => {
     elemento.addEventListener('click', evento => {
         if ((evento.target.textContent != 'Adicionar Dinheiro' &&
             evento.target.textContent != "Quebrar Porquinho")) {
-            let valor = parseInt((evento.target.textContent).split('+')[1])
-            armazenado.push(valor)
-            alert(`R$ ${valor},00 adicionado com sucesso!`)
+            let valorDoBotao = parseInt((evento.target.textContent).split('+')[1])
+            if (localStorage.hasOwnProperty("armazenado")) {
+                armazenado = JSON.parse(localStorage.getItem('armazenado'))
+            }
+            armazenado.push(valorDoBotao)
+            alert(`R$ ${valorDoBotao},00 adicionado com sucesso!`)
         }
-
     })
 })
